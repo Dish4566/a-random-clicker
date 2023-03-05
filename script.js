@@ -1,7 +1,9 @@
-function validateForm() {
-    let x = document.forms["myForm"]["fname"].value;
-    if (x !== "Dishika") {
-      alert("no");
-      return false;
-    }
-  }
+let counter = 0;
+const button = document.getElementsByClassName('block')[0];
+
+
+/* Main funct */
+function clicked() {
+  counter += 1;
+  document.getElementById('score').innerText = counter;
+}

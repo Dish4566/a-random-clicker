@@ -1,22 +1,52 @@
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #353535;
-    color: white;
-}
-input {
-    border-radius: 5px;
-    border-style: none;
-    background-color: #0a0a0a;
-    color: white;
-    transition: 1s;
-}
-input:focus {
-    outline: none;
-    background-color: #303030;
+html { height: 100%; width: 100%; }
+
+body { background-color: #212121; color: white;
+  font-family: "Tilt Neon", sans-serif;
 }
 
-@media screen and (max-width: 800px) {
-    body {
-      width: 100%; /* The width is 100%, when the viewport is 800px or smaller */
-    }
+#score {
+  position: absolute;
+  left: 50vh;
+}
+
+/* Animations */
+@keyframes clicked {
+  50% { transform: scale(1.2);}
+  100% { transform: scale(1); }
+}
+
+@keyframes rotate {
+  From {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Block css */
+.block#button {
+  background-color: transparent;
+  border-color: transparent;
+  position: absolute;
+  top: 35vh;
+  left: 40vh;
+}
+
+.block#button #img {
+  width: 100px;
+  height: 100px;
+  color: white;
+}
+
+.block#button #img:active {
+  animation: clicked 0.08s linear;
+}
+
+.block#rays {
+  position: absolute;
+  top: 25vh;
+  left: 25vh;
+  width: 200px;
+  animation: rotate 2s infinite linear;
 }

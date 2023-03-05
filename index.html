@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel = "stylesheet" href="style.css"></link>
-    </head>
-    <body>
-        <h1> Put Name to Acess Code </h1>
-        <form name="myForm" action="script.js" onsubmit="return validateForm()" method="post">
-            Name: <input type="text" name="fname">
-            <input type="submit" value="Submit">
-        </form>
-        
-        
-        <script type="text/javascript" src="script.js"></script>
-    </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Clicker Game</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <h3 id = "score">0</h3>
+
+  <img class = "block" id = "rays"
+    src="https://www.freepnglogos.com/uploads/sun-rays-png/sun-rays-png-rays-light-transparent-rays-light-images-20.png">
+  
+  <button class = "block" id = "button" onclick="clicked()">
+    <img class = "block" id = "img"     src="https://cdn.freebiesupply.com/logos/large/2x/minecraft-1-logo-png-transparent.png">
+  </button>
+
+
+  
+  
+  <script src="script.js"></script>
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+  <script src="https://kit.fontawesome.com/5a9482cb39.js" crossorigin="anonymous"></script>
+</body>
+
 </html>
