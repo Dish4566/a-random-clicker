@@ -1,8 +1,78 @@
 body {
-    background-color: rgb(54, 54, 54);
+    background-color: #545454;
     color: white;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.canvas {
-    border: 1px solid black;
+
+header {
+    overflow: hidden;
+    background-color: #666;
+    padding: 20px 10px;
+}
+
+header nav a {
+    float: right;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px; 
+    border-radius: 4px;
+}
+
+header nav a:hover {
+    background-color: #7a7a7a;
+}
+
+#title {
+    font: normal 50px'Dancing Script', sans-serif;
+    float: left;
+    text-align: center;
+    padding: 12px;
+}
+
+/* Main */
+
+#home {
+    transform: translate(20px, 0px);
+    font-size: 30px;
+    width: fit-content;
+}
+
+canvas {
+    background-color: white;
+    margin-left: 25px;
+    width: 250px;
+    height: 250px;
+}
+
+form {
+    position: relative;
+    left: 50vh;
+    top: -45vh;
+    overflow: hidden;
+    width: fit-content;
+}
+
+form input {
+    border-radius: 5px;
+    border: 2px inset;
+}
+
+form input#draw {
+    color: white;
+    background-color: #7a7a7a;
+    padding: 10px;
+    border: 1px outset;
+}
+
+@media screen and (max-width: 500px) {
+    header a {
+      float: left;
+      display: block;
+      text-align: left;
+    }
+    
 }
