@@ -1,17 +1,21 @@
-var can = document.getElementsByClass("can")[1];
-var ctx = can.getContext("2d");
+const can = document.getElementById('can');
+const ctx = can.getContext('2d');
 
-var st = document.getElementById("start");
-var c = document.getElementById("color");
+const form = document.getElementById('form');
 
-function draw() {
-    ctx.fillStyle = "red";
+function draw(event) {
+    event.preventDefault();
 
-    ctx.moveTo(0, 0);
+    var fill = document.getElementsByClassName("input")[0];
+    var stroke = document.getElementsByClassName("input")[1];
+
+    ctx.fillStyle = fill.value.toLowerCase();
+    ctx.strokeStyle = stroke.value.toLowerCase();
+
     ctx.beginPath();
-    ctx.arc(100, 300, 50, 0, Math.PI * 2);
-    ctx.closePath();
-    ctx.fill();
+    ctx.arc(100, 100, 25, 0, Math.PI * 2);
     ctx.stroke();
+    ctx.fill();
 }
-draw();
+
+form.addEventListener('submit', draw);

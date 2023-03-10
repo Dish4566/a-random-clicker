@@ -12,7 +12,6 @@
   <script src="https://kit.fontawesome.com/5a9482cb39.js" crossorigin="anonymous"></script>
 
   <link href = "style.css" rel = "stylesheet">
-
 </head>
 
 <body>
@@ -26,19 +25,17 @@
   </header>
   <main>
     <h2 id = "home">Home</h2>
-    <canvas class = "can">
+    <canvas id = "can">
     </canvas>
 
-    <form onsubmit="draw()">
-      <h2>Draw</h2>
-
-      <label for="start">Start</label><br>
-      <input type="text" id="start" name="start"><br>
+    <form id = "form">
       <label for="color">Color:</label><br>
-      <input type="text" id="color" name="color"><br><br>
-
-      <input type="sumbit" id="draw" value="Draw">
-    </form>
+      <input type="text" class="input" name="color" /><br>
+      <label for="outline">Outline:</label><br>
+      <input type="text" class="input" name="outline" /><br><br>
+      
+      <button type="submit">Submit</button>
+    </form> 
     
   </main>
 
@@ -46,6 +43,4 @@
 
   <script src = "script.js"></script>
 </body> 
-
-
 </html>
