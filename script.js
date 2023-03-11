@@ -1,21 +1,61 @@
-const can = document.getElementById('can');
-const ctx = can.getContext('2d');
+const c = document.getElementById("can").getContext("2d");
+const add = Object.getPrototypeOf(c);
 
-const form = document.getElementById('form');
+// Shorthands & Edits
+add.draw = (poly = None) => {
+    c.fill(poly);
+    c.stroke(poly);
+}
 
-function draw(event) {
-    event.preventDefault();
+add.rotateD = (angle) => {
+    c.rotate((angle * Math.PI)/180);
+}
 
+add.rotateCPoint = (angle, pos, size) => {
+    // Horizontal and Vertical center
+    var hc = pos[0] + size[0] / 2;
+    var vc = pos[1] + size[1] / 2;
+
+    c.translate(hc, vc);
+    c.rotateD(angle);
+    c.translate(hc * -1, vc * -1);
+}
+
+// Pre-made shapes
+add.shapes = class { 
+    circle = (pos, radius) => {
+        c.arc(pos[0], pos[1], radius, 0, 2 * Math.PI);
+        c.arc(pos, pos, radius, 0, 2 * Math.PI)
+    }
+    
+}
+
+// Patterns
+add.patterns = class {
+    pattern = (shapes, dist) => {
+
+    }
+}
+
+// Main
+function create(ev) {
+    // Prevents refresh so the canvas can load
+    ev.preventDefault();
+
+    // Getting inputs
     var fill = document.getElementsByClassName("input")[0];
     var stroke = document.getElementsByClassName("input")[1];
 
-    ctx.fillStyle = fill.value.toLowerCase();
-    ctx.strokeStyle = stroke.value.toLowerCase();
+    // Formatting them
+    c.fillStyle = fill.value.toLowerCase();
+    c.strokeStyle = stroke.value.toLowerCase();
+    
+    const shapes = new c.shapes;
 
-    ctx.beginPath();
-    ctx.arc(100, 100, 25, 0, Math.PI * 2);
-    ctx.stroke();
-    ctx.fill();
+    console.log(shapes);
+    
+    c.draw();
 }
 
-form.addEventListener('submit', draw);
+
+document.getElementById("form").addEventListener("submit", create);
