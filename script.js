@@ -48,12 +48,12 @@ add.patterns = class {
     pattern = (shapes, cen, dist = 50) => {
         // idk how to make this cleaner
         if (checkType(shapes)) {
-            shapes.forEach(element => {
+            shapes.forEach(e => {
 
-                if (element == "s") {
+                if (e == "s") {
                     c.moveTo();
                     preSh.square();
-                } else if (element == "c"){
+                } else if (e == "c"){
                     preSh.circle();
                 }
             });
