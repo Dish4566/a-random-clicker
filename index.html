@@ -1,47 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- 
-  <title>Pattern Drawer</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Block Miner</title>
+  </head>
+  <body>
+    <h2 id="score">0</h2>
+    <img src="pics/grass.png" id="button" onclick="clicked()">
 
-  
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat:wght@400&display=swap" rel="stylesheet">
-  <script src="https://kit.fontawesome.com/5a9482cb39.js" crossorigin="anonymous"></script>
-
-  <link href = "style.css" rel = "stylesheet">
-</head>
-
-<body>
-  <header>
-    <a id = "title"><i class="fa-solid fa-paintbrush"></i> Pattern Maker</a>
-
-    <nav>
-      <a><i class="fa-solid fa-image"></i> Works</a>
-      <a href="#home"><i class="fa-solid fa-house"></i> Home</a>
-    </nav>
-  </header>
-  <main>
-    <h2 id = "home">Home</h2>
-    <canvas id = "can"
-     width="250px" height="250px">
-    </canvas>
-
-    <form id = "form" onsubmit="animate(); return false">
-      <label for="color">Color:</label><br>
-      <input type="text" class="input" name="color" /><br>
-      <label for="outline">Outline:</label><br>
-      <input type="text" class="input" name="outline" /><br><br>
-      
-      <button type="submit">Submit</button>
-    </form> 
-    
-  </main>
-
-  
-
-  <script src = "script.js"></script>
-</body> 
+    <script src="script.js"></script>
+  </body>
 </html>
